@@ -8,7 +8,7 @@ const app = express();
 const ids = require('./id.json');
 
 // Define a route to get a random ID
-app.get('/random-id', (req, res) => {
+app.get('/', (req, res) => {
     const randomId = ids[Math.floor(Math.random() * ids.length)];
     res.json({ id: randomId });
 });
